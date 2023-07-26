@@ -8,8 +8,6 @@ import java.util.Map;
 import org.apache.commons.collections4.map.HashedMap;
 import org.springframework.http.HttpHeaders;
 
-import com.appdynamics.serverless.tracers.aws.api.Transaction;
-
 /**
  * Business Object for custom Chello Request
  * 
@@ -31,7 +29,6 @@ public class Request<T> {
 	private CallerContext context;
 	private String email;
 	private List<String> groups = new ArrayList<String>();
-	private Transaction transaction;
 	private Map<String, String> identifyingProperties;
 	private String callType;
 	private Map<String, Object> requestContext = new HashedMap<>();
@@ -157,14 +154,6 @@ public class Request<T> {
 			this.groups.add(groupArray[count]);
 
 		}
-	}
-
-	public Transaction getTransaction() {
-		return transaction;
-	}
-
-	public void setTransaction(Transaction transaction) {
-		this.transaction = transaction;
 	}
 
 	public Map<String, String> getIdentifyingProperties() {
