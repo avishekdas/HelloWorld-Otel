@@ -17,7 +17,6 @@
 		<log4j2.version>2.16.0</log4j2.version>
 		<aspectj.version>1.8.14</aspectj.version>
 		<aws.sdk.version>2.17.162</aws.sdk.version>
-		<!--<chellolambda.version>1.0.1-dev</chellolambda.version>-->
 	</properties>
 
 	<dependencies>
@@ -270,7 +269,7 @@
             <artifactId>sqs</artifactId>
         </dependency>
         
-        <!-- AppDynamics Start -->
+        <!-- AppDynamics Start
 		<dependency>
 			<groupId>com.appdynamics</groupId>
 			<artifactId>lambda-tracer</artifactId>
@@ -291,16 +290,59 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.1</version>
 		</dependency>
-		<!-- AppDynamics END -->
+		AppDynamics END -->
+		
+		<!--Manual otel -->
+		<dependency>
+		    <groupId>com.amazonaws</groupId>
+		    <artifactId>aws-lambda-java-core</artifactId>
+		    <version>1.2.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.amazonaws</groupId>
+		    <artifactId>aws-lambda-java-events</artifactId>
+		    <version>3.9.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.opentelemetry.instrumentation</groupId>
+		    <artifactId>opentelemetry-aws-lambda-events-2.2</artifactId>
+		    <version>1.14.0-alpha</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.opentelemetry</groupId>
+		    <artifactId>opentelemetry-sdk</artifactId>
+		    <version>1.28.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.opentelemetry</groupId>
+		    <artifactId>opentelemetry-api</artifactId>
+		    <version>1.28.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.opentelemetry</groupId>
+		    <artifactId>opentelemetry-exporter-otlp</artifactId>
+		    <version>1.28.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.opentelemetry</groupId>
+		    <artifactId>opentelemetry-exporter-logging</artifactId>
+		    <version>1.28.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.opentelemetry</groupId>
+		    <artifactId>opentelemetry-semconv</artifactId>
+		    <version>1.28.0-alpha</version>
+		</dependency>
+ 		
+ 		<!-- Manual OTEL -->
 
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <version>2.4.0-b180830.0359</version>
-        </dependency>
-		
-		
-	<!-- mockito -->
+        </dependency>	
+		<!-- mockito -->
  		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-junit-jupiter</artifactId>
