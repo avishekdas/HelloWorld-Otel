@@ -207,12 +207,12 @@
             <version>3.0.1</version>
         </dependency>
         
-        <!-- lombok for getter-setters in POJO/model class -->
+        <!-- lombok for getter-setters in POJO/model class
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.22</version>
-        </dependency>
+        </dependency> -->
         
         <!-- for lambda to lambda invocation -->
         <dependency>
